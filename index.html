@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Website Sederhana</title>
+  <meta name="description" content="Contoh website sederhana dengan HTML, CSS, dan JavaScript.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#atas">Nama Anda</a>
+    <nav aria-label="Navigasi utama">
+      <a href="#tentang">Tentang</a>
+      <a href="#proyek">Proyek</a>
+      <a href="#kontak">Kontak</a>
+      <button id="tema" type="button" aria-label="Ganti tema">Tema</button>
+    </nav>
+  </header>
+
+  <main id="atas">
+    <section class="hero">
+      <h1>Saya membuat hal-hal kecil yang berguna di web.</h1>
+      <p>Halo, saya pengembang web. Halaman ini contoh website sederhana yang bisa Anda ubah sesuai kebutuhan.</p>
+      <a class="btn" href="#kontak">Hubungi saya</a>
+    </section>
+
+    <section id="tentang">
+      <h2>Tentang</h2>
+      <p>Tulis ringkasan singkat tentang diri Anda atau usaha Anda di sini. Dua atau tiga kalimat sudah cukup: apa yang Anda kerjakan, untuk siapa, dan apa yang membuatnya berbeda.</p>
+    </section>
+
+    <section id="proyek">
+      <h2>Proyek</h2>
+      <ul class="projects">
+        <li>
+          <h3>Toko Online Kecil</h3>
+          <p>Katalog produk dengan keranjang belanja sederhana.</p>
+        </li>
+        <li>
+          <h3>Aplikasi Catatan</h3>
+          <p>Catatan harian yang tersimpan di browser.</p>
+        </li>
+        <li>
+          <h3>Halaman Acara</h3>
+          <p>Jadwal dan pendaftaran untuk acara komunitas.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="kontak">
+      <h2>Kontak</h2>
+      <form id="form-kontak" novalidate>
+        <label for="nama">Nama</label>
+        <input id="nama" name="nama" type="text" autocomplete="name" required>
+        <p class="error" data-for="nama"></p>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <p class="error" data-for="email"></p>
+
+        <label for="pesan">Pesan</label>
+        <textarea id="pesan" name="pesan" rows="4" required></textarea>
+        <p class="error" data-for="pesan"></p>
+
+        <button class="btn" type="submit">Kirim pesan</button>
+        <p id="status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="tahun"></span> Nama Anda</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
